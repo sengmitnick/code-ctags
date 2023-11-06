@@ -1,6 +1,6 @@
 [project]
 name = "code-ctags"
-version = "0.1.2"
+dynamic = ["version"]
 description = "output the labels of functions, classes, variables, etc. of all files currently downloaded to the terminal"
 authors = [
     {name = "SengMitnick", email = "sengmitnick@163.com"},
@@ -19,5 +19,11 @@ readme = "README.md"
 license = {text = "MIT"}
 
 [build-system]
-requires = ["setuptools>=61", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project.scripts]
+code_ctags = "code_ctags.main:main"
+
+[tool.pdm]
+version = { source = "file", path = "code_ctags/__init__.py" }
