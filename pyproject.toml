@@ -1,0 +1,23 @@
+[project]
+name = "code-ctags"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "SengMitnick", email = "sengmitnick@163.com"},
+]
+dependencies = [
+    "networkx>=3.2.1",
+    "GitPython>=3.1.40",
+    "gitdb>=4.0.11",
+    "Pygments>=2.16.1",
+    "configargparse>=1.7",
+    "tqdm>=4.66.1",
+    "setuptools>=68.2.2",
+]
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
