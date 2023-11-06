@@ -26,4 +26,4 @@ build-backend = "pdm.backend"
 code_ctags = "code_ctags.main:main"
 
 [tool.pdm]
-version = { source = "file", path = "code_ctags/__init__.py" }
+version = { source = "file", path = "src/code_ctags/__init__.py" }
