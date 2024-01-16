@@ -41,7 +41,7 @@ def main(argv=None):
     repo_map = RepoMap(encoding, root_dir, ctags_full=args.ctags_full)
 
     repo_content = repo_map.get_repo_map(chat_fnames, other_fnames)
-    print(repo_content)
+    print(f"```repomap\n{repo_content}\n```")
 
 
 if __name__ == "__main__":
