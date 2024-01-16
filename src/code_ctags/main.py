@@ -31,6 +31,8 @@ def main(argv=None):
         default=[],
         help=f"文件列表",
     )
+    core_group.add_argument('--md', action='store_true',
+                            help=f"ctags输出是否包括md格式的", )
 
     args = parser.parse_args(argv)
 
@@ -41,7 +43,11 @@ def main(argv=None):
     repo_map = RepoMap(encoding, root_dir, ctags_full=args.ctags_full)
 
     repo_content = repo_map.get_repo_map(chat_fnames, other_fnames)
-    print(f"```repomap\n{repo_content}\n```")
+    if args.md:
+        print(f"```repomap\n{repo_content}\n```")
+        return
+
+    print(repo_content)
 
 
 if __name__ == "__main__":
