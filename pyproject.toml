@@ -1,5 +1,5 @@
 [project]
-name = "code-ctags"
+name = "code_ctags"
 dynamic = ["version"]
 description = "output the labels of functions, classes, variables, etc. of all files currently downloaded to the terminal"
 authors = [
